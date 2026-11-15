@@ -20,6 +20,8 @@ verifyEngr/
 ├── README.md          ← You are here. What the project is and how to use it.
 ├── .env.example       ← A template of private settings (keys, links). Copy it to .env.
 ├── .gitignore         ← Tells Git which files NOT to upload (like your real .env).
+├── index.html         ← Sends visitors from the main link to the website folder.
+├── .nojekyll          ← Tells GitHub Pages to publish the files exactly as they are.
 │
 ├── website/           ← Everything people see in the browser.
 │   ├── index.html     ← Home page: search bar + quick verify.
@@ -50,7 +52,11 @@ verifyEngr/
 
 ---
 
-## How to run it
+## Live website
+
+https://jahhdotsol.github.io/VerifyEngr/
+
+## How to run it on your computer
 
 No installation needed.
 
