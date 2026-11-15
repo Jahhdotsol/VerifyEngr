@@ -3,24 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>verifyEngr — Check if an engineer is registered</title>
+  <title>verifyEngr — Check your engineer before you build</title>
+  <meta name="description" content="Check in under a minute if an engineer is registered with COREN.">
+  <link rel="icon" href="images/logo.svg">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>verifyEngr</h1>
-    <p>Check if an engineer is registered with COREN.</p>
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="images/logo.svg" alt="" width="28" height="28"> verifyEngr</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
+  <!-- Sample data notice -->
+  <p class="sample-banner">Demo version: all engineers shown are <strong>sample data</strong>, not real COREN records.</p>
+
   <main>
-    <!-- Search bar: name or COREN number -->
-    <input id="search" type="text" placeholder="Search by name, COREN number, discipline or state">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <h1>Check your engineer before you build.</h1>
+      <p>Unqualified builders put lives at risk. Confirm an engineer is registered with COREN in under a minute.</p>
+    </section>
 
-    <!-- Results appear here (filled in by js/app.js) -->
-    <div id="results"></div>
+    <!-- ===== 1. Quick verify ===== -->
+    <section class="card" id="quick-verify">
+      <h2>Quick verify</h2>
+      <p class="note">Have a COREN number? Enter it to check registration status.</p>
+      <form id="verify-form" class="row">
+        <input id="verify-input" type="text" placeholder="e.g. SAMPLE-01037" aria-label="COREN number" required>
+        <button type="submit">Verify</button>
+      </form>
+      <div id="verify-result" aria-live="polite"></div>
+    </section>
 
-    <p class="note">Sample data only — not real registration records.</p>
+    <!-- ===== 2. How it works ===== -->
+    <section>
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><strong>Search</strong> by name, COREN number, discipline or state.</li>
+        <li><strong>Check the status badge:</strong> Registered, Expired or Suspended.</li>
+        <li><strong>View the profile</strong> for experience and past projects, then get in touch.</li>
+      </ol>
+    </section>
+
+    <!-- ===== 3. Search and filters ===== -->
+    <section id="find">
+      <h2>Find an engineer</h2>
+      <input id="search" type="search" placeholder="Search by name, COREN number, discipline or state" aria-label="Search engineers">
+      <div class="row filters">
+        <select id="filter-discipline" aria-label="Filter by discipline">
+          <option value="">All disciplines</option>
+        </select>
+        <select id="filter-state" aria-label="Filter by state">
+          <option value="">All states</option>
+        </select>
+      </div>
+      <!-- Results appear here (filled in by js/app.js) -->
+      <div id="results"></div>
+    </section>
   </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <p>verifyEngr · Hackathon project 2026 · <a href="about.html">About</a></p>
+    <p class="note">Always confirm registration with COREN before hiring.</p>
+  </footer>
 
   <script src="js/app.js"></script>
 </body>

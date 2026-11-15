@@ -1,36 +1,174 @@
 /* verifyEngr styles — colours, fonts and layout */
 
+/* ---------- Colours used across the site ---------- */
+:root {
+  --blue: #1d5fbf;
+  --blue-dark: #174c99;
+  --blue-light: #f5f9ff;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: #ddd;
+  --green: #1e7b34;
+  --green-bg: #e6f4ea;
+  --orange: #9a5b00;
+  --orange-bg: #fff4e0;
+  --red: #b3261e;
+  --red-bg: #fdecea;
+}
+
+/* ---------- Page basics ---------- */
 body {
   font-family: system-ui, sans-serif;
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 16px;
-  color: #1a1a1a;
+  padding: 0 16px;
+  color: var(--text);
   line-height: 1.5;
 }
 
-a {
-  color: #1d5fbf;
+a { color: var(--blue); }
+
+h1 { line-height: 1.2; }
+
+section { margin: 32px 0; }
+
+.note {
+  color: var(--muted);
+  font-size: 13px;
 }
 
-header h1 {
-  margin-bottom: 4px;
+/* ---------- Header and footer ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
 }
 
-/* Search bar */
-#search {
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-header nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer {
+  margin-top: 48px;
+  padding: 16px 0 32px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.sample-banner {
+  background: var(--orange-bg);
+  color: var(--orange);
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+/* ---------- Home page ---------- */
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #333;
+  margin-top: 0;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  background: var(--blue-light);
+}
+
+.card h2 { margin-top: 0; }
+
+.steps li { margin-bottom: 6px; }
+
+/* Inputs, dropdowns and buttons */
+input,
+select {
   width: 100%;
   padding: 12px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   border-radius: 8px;
   box-sizing: border-box;
+  background: #fff;
 }
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.filters { margin-top: 8px; }
+
+button,
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover,
+.button:hover { background: var(--blue-dark); }
+
+.button-light {
+  background: #fff;
+  color: var(--blue);
+}
+
+.button-light:hover { background: var(--blue-light); }
+
+/* Quick verify answer */
+.verdict {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 2px solid;
+  background: #fff;
+}
+
+.verdict p { margin: 4px 0; }
+
+.verdict-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.verdict-good { border-color: var(--green); background: var(--green-bg); }
+.verdict-warn { border-color: var(--orange); background: var(--orange-bg); }
+.verdict-bad  { border-color: var(--red); background: var(--red-bg); }
 
 /* One search result (the whole card is a link) */
 .result {
   display: block;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 12px;
   margin-top: 12px;
@@ -39,11 +177,11 @@ header h1 {
 }
 
 .result:hover {
-  border-color: #1d5fbf;
-  background: #f5f9ff;
+  border-color: var(--blue);
+  background: var(--blue-light);
 }
 
-/* Status badges */
+/* ---------- Status badges ---------- */
 .badge {
   display: inline-block;
   margin-left: 6px;
@@ -53,10 +191,9 @@ header h1 {
   font-weight: 600;
 }
 
-.badge-registered { color: #1e7b34; background: #e6f4ea; }
-.badge-expired    { color: #b26a00; background: #fff4e0; }
-.badge-suspended  { color: #b3261e; background: #fdecea; }
-.badge-notfound   { color: #b3261e; background: #fdecea; padding: 8px 12px; border-radius: 8px; }
+.badge-registered { color: var(--green); background: var(--green-bg); }
+.badge-expired    { color: var(--orange); background: var(--orange-bg); }
+.badge-suspended  { color: var(--red); background: var(--red-bg); }
 
 .badge-large {
   margin-left: 0;
@@ -64,47 +201,44 @@ header h1 {
   padding: 6px 16px;
 }
 
-/* Profile page */
-.warning {
-  background: #fdecea;
-  color: #b3261e;
+/* Red message box */
+.alert {
   padding: 12px;
   border-radius: 8px;
 }
 
-/* "Email this engineer" button */
-.button {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 18px;
-  background: #1d5fbf;
-  color: #fff;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
+.alert-bad {
+  background: var(--red-bg);
+  color: var(--red);
 }
 
-.button:hover {
-  background: #174c99;
+/* ---------- Profile page ---------- */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
 }
 
 .details {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 150px 1fr;
   gap: 8px 16px;
   margin: 16px 0;
 }
 
-.details dt {
-  color: #666;
-}
+.details dt { color: var(--muted); }
 
 .details dd {
   margin: 0;
   font-weight: 500;
+  overflow-wrap: anywhere;
 }
 
-.note {
-  color: #666;
-  font-size: 13px;
+.report-link {
+  color: var(--red);
+  font-size: 14px;
 }
+
+/* ---------- About page ---------- */
+.prose h2 { margin-top: 28px; }

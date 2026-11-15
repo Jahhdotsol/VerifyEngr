@@ -24,13 +24,14 @@ verifyEngr/
 ├── .nojekyll          ← Tells GitHub Pages to publish the files exactly as they are.
 │
 ├── website/           ← Everything people see in the browser.
-│   ├── index.html     ← Home page: search bar + quick verify.
-│   ├── profile.html   ← One engineer's profile page.
+│   ├── index.html     ← Home page: quick verify, search and filters.
+│   ├── profile.html   ← One engineer's profile page (email, share, report).
+│   ├── about.html     ← About page: the problem, mission and data.
 │   ├── css/
 │   │   └── styles.css ← Colours, fonts and layout.
 │   ├── js/
 │   │   └── app.js     ← The logic: searching and showing results.
-│   └── images/        ← Logo, icons and pictures.
+│   └── images/        ← Logo (logo.svg), icons and pictures.
 │
 ├── data/              ← The information the website shows.
 │   └── sample-engineers.json  ← Sample engineer listings (not real people).
@@ -66,6 +67,10 @@ No installation needed.
 > Tip: some browsers block loading the data file when you double-click. If search shows nothing, use the free **Live Server** extension in VS Code: right-click `index.html` → **Open with Live Server**.
 
 ---
+
+## Change the report email
+
+Open `website/js/app.js` and change `REPORT_EMAIL` near the top to your team's email.
 
 ## Settings (.env)
 

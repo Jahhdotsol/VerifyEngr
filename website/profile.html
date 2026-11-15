@@ -4,17 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engineer profile — verifyEngr</title>
+  <link rel="icon" href="images/logo.svg">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <a href="index.html">← Back to search</a>
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="images/logo.svg" alt="" width="28" height="28"> verifyEngr</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
+  <p class="sample-banner">Demo version: all engineers shown are <strong>sample data</strong>, not real COREN records.</p>
+
   <main>
-    <!-- The engineer's details will be shown here (coming next) -->
+    <a href="index.html#find">← Back to search</a>
+    <!-- The engineer's details are filled in by js/app.js -->
     <div id="profile"></div>
   </main>
+
+  <!-- ===== Footer (same on every page) ===== -->
+  <footer class="site-footer">
+    <p>verifyEngr · Hackathon project 2026 · <a href="about.html">About</a></p>
+    <p class="note">Always confirm registration with COREN before hiring.</p>
+  </footer>
 
   <script src="js/app.js"></script>
 </body>

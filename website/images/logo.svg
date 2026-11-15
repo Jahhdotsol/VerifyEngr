@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="verifyEngr logo">
+  <!-- A simple house outline with a check mark inside -->
+  <rect width="64" height="64" rx="14" fill="#1d5fbf"/>
+  <path d="M14 30 L32 15 L50 30 V49 H14 Z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M23 35 L30 42 L42 29" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
