@@ -101,10 +101,17 @@ if (profileBox) {
         ? ""
         : `<p class="warning">This engineer's registration is <strong>${safe(e.status.toLowerCase())}</strong>. Do not hire until it is confirmed with COREN.</p>`;
 
+    // Only show the email button for engineers who are currently registered
+    const contact =
+      e.status === "Registered" && e.email
+        ? `<a class="button" href="mailto:${safe(e.email)}?subject=${encodeURIComponent("Enquiry via verifyEngr")}">Email this engineer</a>`
+        : "";
+
     profileBox.innerHTML = `
       <h1>${safe(e.fullName)}</h1>
       <p class="${badgeClass(e.status)} badge-large">${safe(e.status)}</p>
       ${warning}
+      ${contact}
 
       <dl class="details">
         <dt>COREN number</dt><dd>${safe(e.corenNumber)}</dd>
@@ -113,6 +120,7 @@ if (profileBox) {
         <dt>Registered since</dt><dd>${e.registeredSince}</dd>
         <dt>Location</dt><dd>${safe(e.city)}, ${safe(e.state)}</dd>
         <dt>Works with</dt><dd>${safe(e.employer)}</dd>
+        <dt>Email</dt><dd>${e.email ? `<a href="mailto:${safe(e.email)}">${safe(e.email)}</a>` : "Not listed"}</dd>
       </dl>
 
       <h2>Past projects</h2>

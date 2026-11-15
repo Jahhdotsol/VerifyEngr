@@ -10,6 +10,7 @@
     "state": "Abuja (FCT)",
     "city": "Garki",
     "employer": "Sample Consult Partners",
+    "email": "fatima.oladipo@example.com",
     "pastProjects": [
       "Shopping plaza frame, Gwarinpa",
       "Church auditorium roof, Wuse",
@@ -29,6 +30,7 @@
     "state": "Anambra",
     "city": "Awka",
     "employer": "Sample Infrastructure Co.",
+    "email": "ngozi.okeke@example.com",
     "pastProjects": [
       "3-storey residential block, Awka",
       "Church auditorium roof, Awka"
@@ -47,6 +49,7 @@
     "state": "Oyo",
     "city": "Ibadan",
     "employer": "Sample Structures Nig.",
+    "email": "ibrahim.oladipo@example.com",
     "pastProjects": [
       "School classroom block, Ogbomosho",
       "Pedestrian bridge, Ogbomosho",
@@ -66,6 +69,7 @@
     "state": "Abuja (FCT)",
     "city": "Wuse",
     "employer": "State Ministry of Works (sample)",
+    "email": "amaka.yakubu@example.com",
     "pastProjects": [
       "Church auditorium roof, Garki",
       "Pedestrian bridge, Maitama"
@@ -84,6 +88,7 @@
     "state": "Ogun",
     "city": "Ota",
     "employer": "State Ministry of Works (sample)",
+    "email": "yusuf.yakubu@example.com",
     "pastProjects": [
       "7-storey residential block, Abeokuta"
     ],
@@ -101,6 +106,7 @@
     "state": "Edo",
     "city": "Ekpoma",
     "employer": "Sample Engineering Works",
+    "email": "halima.okeke@example.com",
     "pastProjects": [
       "Pedestrian bridge, Ekpoma"
     ],
@@ -118,6 +124,7 @@
     "state": "Enugu",
     "city": "Enugu",
     "employer": "Sample Builders Ltd",
+    "email": "adebayo.abubakar@example.com",
     "pastProjects": [
       "Shopping plaza frame, Independence Layout",
       "Office tower retrofit, Nsukka",
@@ -137,6 +144,7 @@
     "state": "Kano",
     "city": "Nassarawa GRA",
     "employer": "Independent consultant",
+    "email": "ngozi.bello@example.com",
     "pastProjects": [
       "Pedestrian bridge, Kano city",
       "School classroom block, Nassarawa GRA"
@@ -155,6 +163,7 @@
     "state": "Kano",
     "city": "Kano city",
     "employer": "Sample Infrastructure Co.",
+    "email": "ebere.abubakar@example.com",
     "pastProjects": [
       "School classroom block, Tarauni"
     ],
@@ -172,6 +181,7 @@
     "state": "Edo",
     "city": "Benin City",
     "employer": "Sample Consult Partners",
+    "email": "musa.afolabi@example.com",
     "pastProjects": [
       "5-storey residential block, Benin City"
     ],
@@ -189,6 +199,7 @@
     "state": "Lagos",
     "city": "Victoria Island",
     "employer": "Independent consultant",
+    "email": "bisi.okeke@example.com",
     "pastProjects": [
       "3-storey residential block, Lekki",
       "Church auditorium roof, Victoria Island"
@@ -207,6 +218,7 @@
     "state": "Lagos",
     "city": "Ikorodu",
     "employer": "Sample Infrastructure Co.",
+    "email": "tunde.lawal@example.com",
     "pastProjects": [
       "School classroom block, Yaba",
       "Pedestrian bridge, Lekki",
@@ -226,6 +238,7 @@
     "state": "Enugu",
     "city": "Enugu",
     "employer": "Sample Structures Nig.",
+    "email": "nnamdi.mohammed@example.com",
     "pastProjects": [
       "Borehole and water network, Enugu"
     ],
@@ -243,6 +256,7 @@
     "state": "Oyo",
     "city": "Oyo town",
     "employer": "State Ministry of Works (sample)",
+    "email": "usman.oladipo@example.com",
     "pastProjects": [
       "Borehole and water network, Ibadan",
       "Culvert replacement, Ibadan"
@@ -261,6 +275,7 @@
     "state": "Lagos",
     "city": "Victoria Island",
     "employer": "Sample Infrastructure Co.",
+    "email": "ibrahim.ogunleye@example.com",
     "pastProjects": [
       "Flood control channel, Ikeja",
       "Road drainage works, Yaba"
@@ -279,6 +294,7 @@
     "state": "Ogun",
     "city": "Ota",
     "employer": "Sample Structures Nig.",
+    "email": "ebere.afolabi@example.com",
     "pastProjects": [
       "Flood control channel, Ota",
       "Road drainage works, Sagamu"
@@ -297,6 +313,7 @@
     "state": "Edo",
     "city": "Benin City",
     "employer": "Sample Engineering Works",
+    "email": "ebere.nwosu@example.com",
     "pastProjects": [
       "Flood control channel, Benin City"
     ],
@@ -314,6 +331,7 @@
     "state": "Kano",
     "city": "Tarauni",
     "employer": "Sample Consult Partners",
+    "email": "kelechi.eze@example.com",
     "pastProjects": [
       "Estate road network, Nassarawa GRA",
       "Borehole and water network, Kano city",
@@ -333,6 +351,7 @@
     "state": "Lagos",
     "city": "Victoria Island",
     "employer": "Sample Infrastructure Co.",
+    "email": "chukwudi.adeyemi@example.com",
     "pastProjects": [
       "Road drainage works, Lekki",
       "Flood control channel, Ikorodu"
@@ -351,6 +370,7 @@
     "state": "Kano",
     "city": "Tarauni",
     "employer": "Independent consultant",
+    "email": "hauwa.salami@example.com",
     "pastProjects": [
       "Estate road network, Nassarawa GRA"
     ],
@@ -368,6 +388,7 @@
     "state": "Ogun",
     "city": "Ota",
     "employer": "Sample Structures Nig.",
+    "email": "oluwaseun.balogun@example.com",
     "pastProjects": [
       "Estate road network, Sagamu",
       "Road drainage works, Abeokuta",
@@ -387,6 +408,7 @@
     "state": "Abuja (FCT)",
     "city": "Wuse",
     "employer": "Independent consultant",
+    "email": "adebayo.adebisi@example.com",
     "pastProjects": [
       "Culvert replacement, Wuse",
       "Road drainage works, Wuse"
@@ -405,6 +427,7 @@
     "state": "Anambra",
     "city": "Awka",
     "employer": "Sample Engineering Works",
+    "email": "ronke.okeke@example.com",
     "pastProjects": [
       "Soil investigation for 5-storey building, Nnewi",
       "Pile foundation design, Awka",
@@ -424,6 +447,7 @@
     "state": "Enugu",
     "city": "Independence Layout",
     "employer": "Sample Consult Partners",
+    "email": "halima.onyeka@example.com",
     "pastProjects": [
       "Slope stability study, Enugu",
       "Pile foundation design, Nsukka"
@@ -442,6 +466,7 @@
     "state": "Kaduna",
     "city": "Zaria",
     "employer": "Sample Builders Ltd",
+    "email": "uche.onyeka@example.com",
     "pastProjects": [
       "Soil investigation for 2-storey building, Kaduna",
       "Slope stability study, Kaduna"
@@ -460,6 +485,7 @@
     "state": "Ogun",
     "city": "Abeokuta",
     "employer": "Sample Consult Partners",
+    "email": "zainab.chukwu@example.com",
     "pastProjects": [
       "Slope stability study, Ota",
       "Soil investigation for 2-storey building, Abeokuta"
@@ -478,6 +504,7 @@
     "state": "Lagos",
     "city": "Ikorodu",
     "employer": "Sample Engineering Works",
+    "email": "chiamaka.adebisi@example.com",
     "pastProjects": [
       "Estate power distribution, Yaba"
     ],
@@ -495,6 +522,7 @@
     "state": "Kano",
     "city": "Nassarawa GRA",
     "employer": "Sample Infrastructure Co.",
+    "email": "ebere.okafor@example.com",
     "pastProjects": [
       "Hospital backup power system, Tarauni"
     ],
@@ -512,6 +540,7 @@
     "state": "Enugu",
     "city": "Independence Layout",
     "employer": "Sample Infrastructure Co.",
+    "email": "sani.afolabi@example.com",
     "pastProjects": [
       "Street lighting project, Enugu"
     ],
@@ -529,6 +558,7 @@
     "state": "Kaduna",
     "city": "Barnawa",
     "employer": "Sample Builders Ltd",
+    "email": "nnamdi.okafor@example.com",
     "pastProjects": [
       "Hospital backup power system, Barnawa",
       "Estate power distribution, Kaduna",
@@ -548,6 +578,7 @@
     "state": "Rivers",
     "city": "Port Harcourt",
     "employer": "Independent consultant",
+    "email": "nkechi.ogunleye@example.com",
     "pastProjects": [
       "Estate power distribution, Eleme",
       "Street lighting project, Obio-Akpor"
@@ -566,6 +597,7 @@
     "state": "Rivers",
     "city": "Eleme",
     "employer": "Sample Consult Partners",
+    "email": "nkechi.obi@example.com",
     "pastProjects": [
       "Fire sprinkler system, Obio-Akpor",
       "Hospital plumbing and gas lines, Eleme"
@@ -584,6 +616,7 @@
     "state": "Kaduna",
     "city": "Kaduna",
     "employer": "Independent consultant",
+    "email": "ibrahim.chukwu@example.com",
     "pastProjects": [
       "Factory HVAC installation, Zaria",
       "Fire sprinkler system, Zaria",
@@ -603,6 +636,7 @@
     "state": "Anambra",
     "city": "Awka",
     "employer": "Sample Consult Partners",
+    "email": "emeka.mohammed@example.com",
     "pastProjects": [
       "Hospital plumbing and gas lines, Onitsha",
       "Fire sprinkler system, Onitsha",
@@ -622,6 +656,7 @@
     "state": "Ogun",
     "city": "Sagamu",
     "employer": "Sample Engineering Works",
+    "email": "ebere.adeyemi@example.com",
     "pastProjects": [
       "Hospital plumbing and gas lines, Sagamu",
       "Factory HVAC installation, Abeokuta",
@@ -641,6 +676,7 @@
     "state": "Edo",
     "city": "Ekpoma",
     "employer": "Sample Builders Ltd",
+    "email": "ebere.yakubu@example.com",
     "pastProjects": [
       "Hospital plumbing and gas lines, Benin City",
       "Fire sprinkler system, Benin City",
@@ -660,6 +696,7 @@
     "state": "Edo",
     "city": "Ekpoma",
     "employer": "Sample Structures Nig.",
+    "email": "femi.adeyemi@example.com",
     "pastProjects": [
       "Office lift installation, Ekpoma",
       "Hotel plumbing and ventilation, Ekpoma"
@@ -678,6 +715,7 @@
     "state": "Abuja (FCT)",
     "city": "Gwarinpa",
     "employer": "Sample Consult Partners",
+    "email": "usman.adebisi@example.com",
     "pastProjects": [
       "Mall fire and safety systems, Wuse"
     ],
@@ -695,6 +733,7 @@
     "state": "Lagos",
     "city": "Surulere",
     "employer": "Independent consultant",
+    "email": "ibrahim.balogun@example.com",
     "pastProjects": [
       "Mall fire and safety systems, Lekki",
       "Office lift installation, Surulere"
@@ -713,6 +752,7 @@
     "state": "Kaduna",
     "city": "Kaduna",
     "employer": "Sample Consult Partners",
+    "email": "emeka.balogun@example.com",
     "pastProjects": [
       "Hotel plumbing and ventilation, Barnawa",
       "Office lift installation, Barnawa",

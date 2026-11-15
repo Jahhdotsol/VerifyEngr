@@ -72,6 +72,22 @@ header h1 {
   border-radius: 8px;
 }
 
+/* "Email this engineer" button */
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #1d5fbf;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #174c99;
+}
+
 .details {
   display: grid;
   grid-template-columns: 160px 1fr;
