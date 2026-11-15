@@ -1,0 +1,7 @@
+# Private settings — never upload
+.env
+
+# System and editor files
+.DS_Store
+Thumbs.db
+.vscode/

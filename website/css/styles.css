@@ -1,0 +1,38 @@
+/* verifyEngr styles — colours, fonts and layout */
+
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+  color: #1a1a1a;
+}
+
+header h1 {
+  margin-bottom: 4px;
+}
+
+#search {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.result {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.badge-registered { color: #1e7b34; font-weight: 600; }
+.badge-expired    { color: #b26a00; font-weight: 600; }
+.badge-notfound   { color: #b3261e; font-weight: 600; }
+
+.note {
+  color: #666;
+  font-size: 13px;
+}

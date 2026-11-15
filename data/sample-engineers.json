@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "fullName": "Sample Engineer One",
+    "corenNumber": "SAMPLE-0001",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 12,
+    "state": "Lagos",
+    "employer": "Sample Builders Ltd",
+    "pastProjects": ["3-storey residential block, Ikeja", "Pedestrian bridge, Yaba"],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data"
+  },
+  {
+    "id": 2,
+    "fullName": "Sample Engineer Two",
+    "corenNumber": "SAMPLE-0002",
+    "status": "Expired",
+    "discipline": "Civil",
+    "yearsOfExperience": 6,
+    "state": "Abuja (FCT)",
+    "employer": "Independent",
+    "pastProjects": ["Road drainage works, Gwarinpa"],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data"
+  }
+]
