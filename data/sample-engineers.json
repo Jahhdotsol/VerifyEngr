@@ -1,28 +1,724 @@
 [
   {
     "id": 1,
-    "fullName": "Sample Engineer One",
-    "corenNumber": "SAMPLE-0001",
-    "status": "Registered",
+    "fullName": "Engr. Fatima Oladipo",
+    "corenNumber": "SAMPLE-01000",
+    "status": "Suspended",
     "discipline": "Structural",
-    "yearsOfExperience": 12,
-    "state": "Lagos",
-    "employer": "Sample Builders Ltd",
-    "pastProjects": ["3-storey residential block, Ikeja", "Pedestrian bridge, Yaba"],
+    "yearsOfExperience": 7,
+    "registeredSince": 2020,
+    "state": "Abuja (FCT)",
+    "city": "Garki",
+    "employer": "Sample Consult Partners",
+    "pastProjects": [
+      "Shopping plaza frame, Gwarinpa",
+      "Church auditorium roof, Wuse",
+      "4-storey residential block, Garki"
+    ],
     "lastChecked": "2026-11-15",
-    "source": "Sample data"
+    "source": "Sample data (modelled on COREN and NSE records)"
   },
   {
     "id": 2,
-    "fullName": "Sample Engineer Two",
-    "corenNumber": "SAMPLE-0002",
+    "fullName": "Engr. Ngozi Okeke",
+    "corenNumber": "SAMPLE-01037",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 29,
+    "registeredSince": 1998,
+    "state": "Anambra",
+    "city": "Awka",
+    "employer": "Sample Infrastructure Co.",
+    "pastProjects": [
+      "3-storey residential block, Awka",
+      "Church auditorium roof, Awka"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 3,
+    "fullName": "Engr. Ibrahim Oladipo",
+    "corenNumber": "SAMPLE-01074",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 7,
+    "registeredSince": 2019,
+    "state": "Oyo",
+    "city": "Ibadan",
+    "employer": "Sample Structures Nig.",
+    "pastProjects": [
+      "School classroom block, Ogbomosho",
+      "Pedestrian bridge, Ogbomosho",
+      "4-storey residential block, Oyo town"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 4,
+    "fullName": "Engr. Amaka Yakubu",
+    "corenNumber": "SAMPLE-01111",
+    "status": "Suspended",
+    "discipline": "Structural",
+    "yearsOfExperience": 11,
+    "registeredSince": 2016,
+    "state": "Abuja (FCT)",
+    "city": "Wuse",
+    "employer": "State Ministry of Works (sample)",
+    "pastProjects": [
+      "Church auditorium roof, Garki",
+      "Pedestrian bridge, Maitama"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 5,
+    "fullName": "Engr. Yusuf Yakubu",
+    "corenNumber": "SAMPLE-01148",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 30,
+    "registeredSince": 1998,
+    "state": "Ogun",
+    "city": "Ota",
+    "employer": "State Ministry of Works (sample)",
+    "pastProjects": [
+      "7-storey residential block, Abeokuta"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 6,
+    "fullName": "Engr. Halima Okeke",
+    "corenNumber": "SAMPLE-01185",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 29,
+    "registeredSince": 1997,
+    "state": "Edo",
+    "city": "Ekpoma",
+    "employer": "Sample Engineering Works",
+    "pastProjects": [
+      "Pedestrian bridge, Ekpoma"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 7,
+    "fullName": "Engr. Adebayo Abubakar",
+    "corenNumber": "SAMPLE-01222",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 25,
+    "registeredSince": 2001,
+    "state": "Enugu",
+    "city": "Enugu",
+    "employer": "Sample Builders Ltd",
+    "pastProjects": [
+      "Shopping plaza frame, Independence Layout",
+      "Office tower retrofit, Nsukka",
+      "School classroom block, Nsukka"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 8,
+    "fullName": "Engr. Ngozi Bello",
+    "corenNumber": "SAMPLE-01259",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 9,
+    "registeredSince": 2017,
+    "state": "Kano",
+    "city": "Nassarawa GRA",
+    "employer": "Independent consultant",
+    "pastProjects": [
+      "Pedestrian bridge, Kano city",
+      "School classroom block, Nassarawa GRA"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 9,
+    "fullName": "Engr. Ebere Abubakar",
+    "corenNumber": "SAMPLE-01296",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 19,
+    "registeredSince": 2008,
+    "state": "Kano",
+    "city": "Kano city",
+    "employer": "Sample Infrastructure Co.",
+    "pastProjects": [
+      "School classroom block, Tarauni"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 10,
+    "fullName": "Engr. Musa Afolabi",
+    "corenNumber": "SAMPLE-01333",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 24,
+    "registeredSince": 2002,
+    "state": "Edo",
+    "city": "Benin City",
+    "employer": "Sample Consult Partners",
+    "pastProjects": [
+      "5-storey residential block, Benin City"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 11,
+    "fullName": "Engr. Bisi Okeke",
+    "corenNumber": "SAMPLE-01370",
+    "status": "Expired",
+    "discipline": "Structural",
+    "yearsOfExperience": 6,
+    "registeredSince": 2020,
+    "state": "Lagos",
+    "city": "Victoria Island",
+    "employer": "Independent consultant",
+    "pastProjects": [
+      "3-storey residential block, Lekki",
+      "Church auditorium roof, Victoria Island"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 12,
+    "fullName": "Engr. Tunde Lawal",
+    "corenNumber": "SAMPLE-01407",
+    "status": "Registered",
+    "discipline": "Structural",
+    "yearsOfExperience": 20,
+    "registeredSince": 2008,
+    "state": "Lagos",
+    "city": "Ikorodu",
+    "employer": "Sample Infrastructure Co.",
+    "pastProjects": [
+      "School classroom block, Yaba",
+      "Pedestrian bridge, Lekki",
+      "2-storey residential block, Ikorodu"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 13,
+    "fullName": "Engr. Nnamdi Mohammed",
+    "corenNumber": "SAMPLE-01444",
+    "status": "Registered",
+    "discipline": "Civil",
+    "yearsOfExperience": 22,
+    "registeredSince": 2006,
+    "state": "Enugu",
+    "city": "Enugu",
+    "employer": "Sample Structures Nig.",
+    "pastProjects": [
+      "Borehole and water network, Enugu"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 14,
+    "fullName": "Engr. Usman Oladipo",
+    "corenNumber": "SAMPLE-01481",
+    "status": "Registered",
+    "discipline": "Civil",
+    "yearsOfExperience": 25,
+    "registeredSince": 2002,
+    "state": "Oyo",
+    "city": "Oyo town",
+    "employer": "State Ministry of Works (sample)",
+    "pastProjects": [
+      "Borehole and water network, Ibadan",
+      "Culvert replacement, Ibadan"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 15,
+    "fullName": "Engr. Ibrahim Ogunleye",
+    "corenNumber": "SAMPLE-01518",
+    "status": "Registered",
+    "discipline": "Civil",
+    "yearsOfExperience": 28,
+    "registeredSince": 2000,
+    "state": "Lagos",
+    "city": "Victoria Island",
+    "employer": "Sample Infrastructure Co.",
+    "pastProjects": [
+      "Flood control channel, Ikeja",
+      "Road drainage works, Yaba"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 16,
+    "fullName": "Engr. Ebere Afolabi",
+    "corenNumber": "SAMPLE-01555",
+    "status": "Registered",
+    "discipline": "Civil",
+    "yearsOfExperience": 19,
+    "registeredSince": 2008,
+    "state": "Ogun",
+    "city": "Ota",
+    "employer": "Sample Structures Nig.",
+    "pastProjects": [
+      "Flood control channel, Ota",
+      "Road drainage works, Sagamu"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 17,
+    "fullName": "Engr. Ebere Nwosu",
+    "corenNumber": "SAMPLE-01592",
+    "status": "Registered",
+    "discipline": "Civil",
+    "yearsOfExperience": 27,
+    "registeredSince": 2001,
+    "state": "Edo",
+    "city": "Benin City",
+    "employer": "Sample Engineering Works",
+    "pastProjects": [
+      "Flood control channel, Benin City"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 18,
+    "fullName": "Engr. Kelechi Eze",
+    "corenNumber": "SAMPLE-01629",
     "status": "Expired",
     "discipline": "Civil",
-    "yearsOfExperience": 6,
-    "state": "Abuja (FCT)",
-    "employer": "Independent",
-    "pastProjects": ["Road drainage works, Gwarinpa"],
+    "yearsOfExperience": 24,
+    "registeredSince": 2003,
+    "state": "Kano",
+    "city": "Tarauni",
+    "employer": "Sample Consult Partners",
+    "pastProjects": [
+      "Estate road network, Nassarawa GRA",
+      "Borehole and water network, Kano city",
+      "Flood control channel, Kano city"
+    ],
     "lastChecked": "2026-11-15",
-    "source": "Sample data"
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 19,
+    "fullName": "Engr. Chukwudi Adeyemi",
+    "corenNumber": "SAMPLE-01666",
+    "status": "Registered",
+    "discipline": "Civil",
+    "yearsOfExperience": 16,
+    "registeredSince": 2010,
+    "state": "Lagos",
+    "city": "Victoria Island",
+    "employer": "Sample Infrastructure Co.",
+    "pastProjects": [
+      "Road drainage works, Lekki",
+      "Flood control channel, Ikorodu"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 20,
+    "fullName": "Engr. Hauwa Salami",
+    "corenNumber": "SAMPLE-01703",
+    "status": "Registered",
+    "discipline": "Civil",
+    "yearsOfExperience": 10,
+    "registeredSince": 2018,
+    "state": "Kano",
+    "city": "Tarauni",
+    "employer": "Independent consultant",
+    "pastProjects": [
+      "Estate road network, Nassarawa GRA"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 21,
+    "fullName": "Engr. Oluwaseun Balogun",
+    "corenNumber": "SAMPLE-01740",
+    "status": "Expired",
+    "discipline": "Civil",
+    "yearsOfExperience": 30,
+    "registeredSince": 1997,
+    "state": "Ogun",
+    "city": "Ota",
+    "employer": "Sample Structures Nig.",
+    "pastProjects": [
+      "Estate road network, Sagamu",
+      "Road drainage works, Abeokuta",
+      "Culvert replacement, Ota"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 22,
+    "fullName": "Engr. Adebayo Adebisi",
+    "corenNumber": "SAMPLE-01777",
+    "status": "Registered",
+    "discipline": "Civil",
+    "yearsOfExperience": 19,
+    "registeredSince": 2007,
+    "state": "Abuja (FCT)",
+    "city": "Wuse",
+    "employer": "Independent consultant",
+    "pastProjects": [
+      "Culvert replacement, Wuse",
+      "Road drainage works, Wuse"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 23,
+    "fullName": "Engr. Ronke Okeke",
+    "corenNumber": "SAMPLE-01814",
+    "status": "Registered",
+    "discipline": "Geotechnical",
+    "yearsOfExperience": 28,
+    "registeredSince": 2000,
+    "state": "Anambra",
+    "city": "Awka",
+    "employer": "Sample Engineering Works",
+    "pastProjects": [
+      "Soil investigation for 5-storey building, Nnewi",
+      "Pile foundation design, Awka",
+      "Slope stability study, Awka"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 24,
+    "fullName": "Engr. Halima Onyeka",
+    "corenNumber": "SAMPLE-01851",
+    "status": "Registered",
+    "discipline": "Geotechnical",
+    "yearsOfExperience": 10,
+    "registeredSince": 2016,
+    "state": "Enugu",
+    "city": "Independence Layout",
+    "employer": "Sample Consult Partners",
+    "pastProjects": [
+      "Slope stability study, Enugu",
+      "Pile foundation design, Nsukka"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 25,
+    "fullName": "Engr. Uche Onyeka",
+    "corenNumber": "SAMPLE-01888",
+    "status": "Registered",
+    "discipline": "Geotechnical",
+    "yearsOfExperience": 12,
+    "registeredSince": 2015,
+    "state": "Kaduna",
+    "city": "Zaria",
+    "employer": "Sample Builders Ltd",
+    "pastProjects": [
+      "Soil investigation for 2-storey building, Kaduna",
+      "Slope stability study, Kaduna"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 26,
+    "fullName": "Engr. Zainab Chukwu",
+    "corenNumber": "SAMPLE-01925",
+    "status": "Registered",
+    "discipline": "Geotechnical",
+    "yearsOfExperience": 25,
+    "registeredSince": 2002,
+    "state": "Ogun",
+    "city": "Abeokuta",
+    "employer": "Sample Consult Partners",
+    "pastProjects": [
+      "Slope stability study, Ota",
+      "Soil investigation for 2-storey building, Abeokuta"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 27,
+    "fullName": "Engr. Chiamaka Adebisi",
+    "corenNumber": "SAMPLE-01962",
+    "status": "Registered",
+    "discipline": "Electrical",
+    "yearsOfExperience": 18,
+    "registeredSince": 2010,
+    "state": "Lagos",
+    "city": "Ikorodu",
+    "employer": "Sample Engineering Works",
+    "pastProjects": [
+      "Estate power distribution, Yaba"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 28,
+    "fullName": "Engr. Ebere Okafor",
+    "corenNumber": "SAMPLE-01999",
+    "status": "Expired",
+    "discipline": "Electrical",
+    "yearsOfExperience": 23,
+    "registeredSince": 2004,
+    "state": "Kano",
+    "city": "Nassarawa GRA",
+    "employer": "Sample Infrastructure Co.",
+    "pastProjects": [
+      "Hospital backup power system, Tarauni"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 29,
+    "fullName": "Engr. Sani Afolabi",
+    "corenNumber": "SAMPLE-02036",
+    "status": "Registered",
+    "discipline": "Electrical",
+    "yearsOfExperience": 19,
+    "registeredSince": 2007,
+    "state": "Enugu",
+    "city": "Independence Layout",
+    "employer": "Sample Infrastructure Co.",
+    "pastProjects": [
+      "Street lighting project, Enugu"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 30,
+    "fullName": "Engr. Nnamdi Okafor",
+    "corenNumber": "SAMPLE-02073",
+    "status": "Registered",
+    "discipline": "Electrical",
+    "yearsOfExperience": 7,
+    "registeredSince": 2021,
+    "state": "Kaduna",
+    "city": "Barnawa",
+    "employer": "Sample Builders Ltd",
+    "pastProjects": [
+      "Hospital backup power system, Barnawa",
+      "Estate power distribution, Kaduna",
+      "Street lighting project, Zaria"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 31,
+    "fullName": "Engr. Nkechi Ogunleye",
+    "corenNumber": "SAMPLE-02110",
+    "status": "Registered",
+    "discipline": "Electrical",
+    "yearsOfExperience": 18,
+    "registeredSince": 2010,
+    "state": "Rivers",
+    "city": "Port Harcourt",
+    "employer": "Independent consultant",
+    "pastProjects": [
+      "Estate power distribution, Eleme",
+      "Street lighting project, Obio-Akpor"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 32,
+    "fullName": "Engr. Nkechi Obi",
+    "corenNumber": "SAMPLE-02147",
+    "status": "Expired",
+    "discipline": "Mechanical",
+    "yearsOfExperience": 8,
+    "registeredSince": 2020,
+    "state": "Rivers",
+    "city": "Eleme",
+    "employer": "Sample Consult Partners",
+    "pastProjects": [
+      "Fire sprinkler system, Obio-Akpor",
+      "Hospital plumbing and gas lines, Eleme"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 33,
+    "fullName": "Engr. Ibrahim Chukwu",
+    "corenNumber": "SAMPLE-02184",
+    "status": "Registered",
+    "discipline": "Mechanical",
+    "yearsOfExperience": 16,
+    "registeredSince": 2012,
+    "state": "Kaduna",
+    "city": "Kaduna",
+    "employer": "Independent consultant",
+    "pastProjects": [
+      "Factory HVAC installation, Zaria",
+      "Fire sprinkler system, Zaria",
+      "Hospital plumbing and gas lines, Zaria"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 34,
+    "fullName": "Engr. Emeka Mohammed",
+    "corenNumber": "SAMPLE-02221",
+    "status": "Registered",
+    "discipline": "Mechanical",
+    "yearsOfExperience": 15,
+    "registeredSince": 2013,
+    "state": "Anambra",
+    "city": "Awka",
+    "employer": "Sample Consult Partners",
+    "pastProjects": [
+      "Hospital plumbing and gas lines, Onitsha",
+      "Fire sprinkler system, Onitsha",
+      "Factory HVAC installation, Nnewi"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 35,
+    "fullName": "Engr. Ebere Adeyemi",
+    "corenNumber": "SAMPLE-02258",
+    "status": "Expired",
+    "discipline": "Mechanical",
+    "yearsOfExperience": 3,
+    "registeredSince": 2025,
+    "state": "Ogun",
+    "city": "Sagamu",
+    "employer": "Sample Engineering Works",
+    "pastProjects": [
+      "Hospital plumbing and gas lines, Sagamu",
+      "Factory HVAC installation, Abeokuta",
+      "Fire sprinkler system, Ota"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 36,
+    "fullName": "Engr. Ebere Yakubu",
+    "corenNumber": "SAMPLE-02295",
+    "status": "Registered",
+    "discipline": "Mechanical",
+    "yearsOfExperience": 19,
+    "registeredSince": 2008,
+    "state": "Edo",
+    "city": "Ekpoma",
+    "employer": "Sample Builders Ltd",
+    "pastProjects": [
+      "Hospital plumbing and gas lines, Benin City",
+      "Fire sprinkler system, Benin City",
+      "Factory HVAC installation, Benin City"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 37,
+    "fullName": "Engr. Femi Adeyemi",
+    "corenNumber": "SAMPLE-02332",
+    "status": "Registered",
+    "discipline": "Building Services",
+    "yearsOfExperience": 28,
+    "registeredSince": 2000,
+    "state": "Edo",
+    "city": "Ekpoma",
+    "employer": "Sample Structures Nig.",
+    "pastProjects": [
+      "Office lift installation, Ekpoma",
+      "Hotel plumbing and ventilation, Ekpoma"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 38,
+    "fullName": "Engr. Usman Adebisi",
+    "corenNumber": "SAMPLE-02369",
+    "status": "Registered",
+    "discipline": "Building Services",
+    "yearsOfExperience": 29,
+    "registeredSince": 1998,
+    "state": "Abuja (FCT)",
+    "city": "Gwarinpa",
+    "employer": "Sample Consult Partners",
+    "pastProjects": [
+      "Mall fire and safety systems, Wuse"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 39,
+    "fullName": "Engr. Ibrahim Balogun",
+    "corenNumber": "SAMPLE-02406",
+    "status": "Registered",
+    "discipline": "Building Services",
+    "yearsOfExperience": 25,
+    "registeredSince": 2002,
+    "state": "Lagos",
+    "city": "Surulere",
+    "employer": "Independent consultant",
+    "pastProjects": [
+      "Mall fire and safety systems, Lekki",
+      "Office lift installation, Surulere"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
+  },
+  {
+    "id": 40,
+    "fullName": "Engr. Emeka Balogun",
+    "corenNumber": "SAMPLE-02443",
+    "status": "Registered",
+    "discipline": "Building Services",
+    "yearsOfExperience": 13,
+    "registeredSince": 2014,
+    "state": "Kaduna",
+    "city": "Kaduna",
+    "employer": "Sample Consult Partners",
+    "pastProjects": [
+      "Hotel plumbing and ventilation, Barnawa",
+      "Office lift installation, Barnawa",
+      "Mall fire and safety systems, Barnawa"
+    ],
+    "lastChecked": "2026-11-15",
+    "source": "Sample data (modelled on COREN and NSE records)"
   }
 ]

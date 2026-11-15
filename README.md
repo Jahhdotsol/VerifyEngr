@@ -4,7 +4,7 @@
 
 verifyEngr is a simple website where anyone (a homeowner, developer or inspector) can search for an engineer by name or COREN number and see:
 
-- whether they are registered (Registered / Not found / Expired)
+- whether they are registered (Registered / Expired / Suspended / Not found)
 - their discipline (e.g. structural, civil)
 - their years of experience
 - their state and past projects
