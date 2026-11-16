@@ -55,7 +55,8 @@ verifyEngr/
 
 ## Live website
 
-https://jahhdotsol.github.io/VerifyEngr/
+- **Main:** https://verifyengr.vercel.app
+- Backup (GitHub Pages): https://jahhdotsol.github.io/VerifyEngr/
 
 ## How to run it on your computer
 
