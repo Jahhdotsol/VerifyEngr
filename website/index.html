@@ -4,74 +4,199 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>verifyEngr — Check your engineer before you build</title>
-  <meta name="description" content="Check in under a minute if an engineer is registered with COREN.">
+  <meta name="description" content="Check in under a minute if an engineer is registered with COREN. Search by name, discipline or state.">
+  <!-- Link preview (WhatsApp, X, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="verifyEngr">
+  <meta property="og:title" content="verifyEngr — Check your engineer before you build">
+  <meta property="og:description" content="Check in under a minute if an engineer is registered with COREN.">
+  <meta property="og:url" content="https://verifyengr.vercel.app/website/index.html">
+  <meta property="og:image" content="https://verifyengr.vercel.app/website/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a1630">
   <link rel="icon" href="images/logo.svg">
+  <link rel="preload" href="fonts/heros-cn-bold.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
   <!-- ===== Header (same on every page) ===== -->
   <header class="site-header">
-    <a class="logo" href="index.html"><img src="images/logo.svg" alt="" width="28" height="28"> verifyEngr</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="images/logo.svg" alt=""> verifyEngr</a>
+      <nav class="site-nav" aria-label="Main">
+        <a class="nav-hide" href="#why">Why it matters</a>
+        <a class="nav-hide" href="#find">Find an engineer</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="#top">Verify</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Sample data notice -->
-  <p class="sample-banner">Demo version: all engineers shown are <strong>sample data</strong>, not real COREN records.</p>
+  <main id="top">
 
-  <main>
-    <!-- ===== Hero ===== -->
-    <section class="hero">
-      <h1>Check your engineer before you build.</h1>
-      <p>Unqualified builders put lives at risk. Confirm an engineer is registered with COREN in under a minute.</p>
-    </section>
+    <!-- ===== 1. Hero: quick verify ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <canvas id="frame3d" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="kicker fade-up">Engineer verification for Nigeria</p>
+          <h1 id="hero-title" class="display reveal-lines">
+            <span class="line"><span style="--i:0">Check your</span></span>
+            <span class="line"><span style="--i:1">engineer</span></span>
+            <span class="line"><span style="--i:2" class="blue">before you</span></span>
+            <span class="line"><span style="--i:3" class="blue">build.</span></span>
+          </h1>
+          <p class="lead fade-up" style="--d:500ms">Confirm in under a minute that an engineer is registered with COREN, the Council for the Regulation of Engineering in Nigeria.</p>
 
-    <!-- ===== 1. Quick verify ===== -->
-    <section class="card" id="quick-verify">
-      <h2>Quick verify</h2>
-      <p class="note">Have a COREN number? Enter it to check registration status.</p>
-      <form id="verify-form" class="row">
-        <input id="verify-input" type="text" placeholder="e.g. SAMPLE-01037" aria-label="COREN number" required>
-        <button type="submit">Verify</button>
-      </form>
-      <div id="verify-result" aria-live="polite"></div>
-    </section>
-
-    <!-- ===== 2. How it works ===== -->
-    <section>
-      <h2>How it works</h2>
-      <ol class="steps">
-        <li><strong>Search</strong> by name, COREN number, discipline or state.</li>
-        <li><strong>Check the status badge:</strong> Registered, Expired or Suspended.</li>
-        <li><strong>View the profile</strong> for experience and past projects, then get in touch.</li>
-      </ol>
-    </section>
-
-    <!-- ===== 3. Search and filters ===== -->
-    <section id="find">
-      <h2>Find an engineer</h2>
-      <input id="search" type="search" placeholder="Search by name, COREN number, discipline or state" aria-label="Search engineers">
-      <div class="row filters">
-        <select id="filter-discipline" aria-label="Filter by discipline">
-          <option value="">All disciplines</option>
-        </select>
-        <select id="filter-state" aria-label="Filter by state">
-          <option value="">All states</option>
-        </select>
+          <div class="verify-wrap fade-up" style="--d:650ms">
+            <form id="verify-form" class="verify">
+              <label for="verify-input" class="sr-only">COREN number</label>
+              <input id="verify-input" type="text" placeholder="Enter a COREN number" autocomplete="off" required>
+              <button class="btn" type="submit">Verify</button>
+            </form>
+          </div>
+          <p class="try fade-up" style="--d:750ms">
+            Try a sample record:
+            <button class="chip" type="button" data-try="SAMPLE-01037">SAMPLE-01037</button>
+            <button class="chip" type="button" data-try="SAMPLE-01000">SAMPLE-01000</button>
+            <button class="chip" type="button" data-try="ABC-123">ABC-123</button>
+          </p>
+          <div id="verify-result" aria-live="polite"></div>
+        </div>
       </div>
-      <!-- Results appear here (filled in by js/app.js) -->
-      <div id="results"></div>
+      <div class="scroll-cue" aria-hidden="true"></div>
+    </section>
+
+    <!-- blue wave between the hero and the dark section -->
+    <div class="wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 180" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="waveFill" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#2348e8" stop-opacity="0"/>
+            <stop offset=".55" stop-color="#2348e8" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#0a1630"/>
+          </linearGradient>
+        </defs>
+        <path id="wavePath" fill="url(#waveFill)" d="M0 90 C 360 30, 720 150, 1080 90 S 1440 60, 1440 60 V180 H0 Z"/>
+      </svg>
+    </div>
+
+    <!-- ===== 2. Why it matters (dark) ===== -->
+    <section class="matters dark" id="why" aria-labelledby="why-title">
+      <div class="wrap">
+        <div class="matters-grid">
+          <h2 id="why-title" class="display reveal-lines">
+            <span class="line"><span style="--i:0">679 buildings</span></span>
+            <span class="line"><span style="--i:1">have collapsed</span></span>
+            <span class="line"><span style="--i:2" class="soft">in Nigeria</span></span>
+            <span class="line"><span style="--i:3" class="soft">since 1974.</span></span>
+          </h2>
+          <div class="stats">
+            <div class="stat fade-up"><span class="num" data-count="679">0</span><span class="label">recorded building collapses</span></div>
+            <div class="stat fade-up" style="--d:120ms"><span class="num" data-count="1639" data-suffix="+">0</span><span class="label">lives lost</span></div>
+            <div class="stat fade-up" style="--d:240ms"><span class="num" data-count="53.9" data-decimals="1" data-suffix="%">0</span><span class="label">of collapses happened in Lagos</span></div>
+          </div>
+        </div>
+        <p class="matters-body fade-up">Experts link collapses to substandard materials, weak enforcement and unqualified people posing as professionals. Who designs and supervises your building is something you can check before work starts.</p>
+        <p class="source fade-up">Figures from the Building Collapse Prevention Guild, reported by Nigeria Info in November 2025. <a href="https://www.nigeriainfo.fm/news/homepage/falling-walls-failing-standards-nigerias-50-year-battle-with-building-collapses" target="_blank" rel="noopener">Read the report</a></p>
+      </div>
+    </section>
+
+    <!-- ===== 3. How it works (a real sequence, so it is numbered) ===== -->
+    <section class="steps-section" aria-labelledby="how-title">
+      <div class="wrap">
+        <h2 id="how-title" class="display section-title reveal-lines">
+          <span class="line"><span style="--i:0">Three steps.</span></span>
+          <span class="line"><span style="--i:1">One minute.</span></span>
+        </h2>
+        <div class="steps" id="steps">
+          <svg class="steps-line" viewBox="0 0 1000 4" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="0" y1="2" x2="1000" y2="2" stroke="#dfe4ef" stroke-width="4"/>
+            <line id="stepsProgress" x1="0" y1="2" x2="1000" y2="2" stroke="#2348e8" stroke-width="4" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+          </svg>
+          <div class="step"><span class="step-no">1</span><h3>Search</h3><p>Type a name or COREN number, or filter by discipline and state.</p></div>
+          <div class="step"><span class="step-no">2</span><h3>Check the status</h3><p>Registered, expired or suspended, shown in plain colours.</p></div>
+          <div class="step"><span class="step-no">3</span><h3>Hire with confidence</h3><p>See experience and past projects, then email the engineer or share the result.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Find an engineer (dark blueprint) ===== -->
+    <section class="find dark blueprint-grid" id="find" aria-labelledby="find-title">
+      <div class="marquee" id="marquee" aria-hidden="true">Find the right engineer &nbsp;·&nbsp; Find the right engineer &nbsp;·&nbsp; Find the right engineer</div>
+      <div class="wrap">
+        <div class="find-head">
+          <h2 id="find-title" class="display reveal-lines">
+            <span class="line"><span style="--i:0">Find an</span></span>
+            <span class="line"><span style="--i:1">engineer</span></span>
+          </h2>
+          <p class="fade-up">Search by name, COREN number, discipline or state. This demo lists 40 sample engineers, not real COREN records.</p>
+        </div>
+
+        <div class="searchbar" role="search">
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <label for="search" class="sr-only">Search engineers</label>
+            <input id="search" type="search" placeholder="Name, COREN number, discipline or state" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="filter-discipline" class="sr-only">Discipline</label>
+            <select id="filter-discipline"><option value="">All disciplines</option></select>
+          </div>
+          <div class="field">
+            <label for="filter-state" class="sr-only">State</label>
+            <select id="filter-state"><option value="">All states</option></select>
+          </div>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+        <div class="cards animate" id="results">
+          <!-- loading placeholders, replaced by js/app.js -->
+          <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+          <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+        </div>
+        <div class="more" id="more"></div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Closing call to action ===== -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <h2 id="cta-title" class="display reveal-lines">
+          <span class="line"><span style="--i:0">Know who</span></span>
+          <span class="line"><span style="--i:1">builds it.</span></span>
+        </h2>
+        <p class="fade-up">A one-minute check today can save a building tomorrow.</p>
+        <a class="btn fade-up" href="#top" id="cta-verify">Check an engineer</a>
+      </div>
     </section>
   </main>
 
   <!-- ===== Footer (same on every page) ===== -->
-  <footer class="site-footer">
-    <p>verifyEngr · Hackathon project 2026 · <a href="about.html">About</a></p>
-    <p class="note">Always confirm registration with COREN before hiring.</p>
+  <footer class="site-footer dark">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <a class="logo" href="index.html"><img src="images/logo.svg" alt=""> verifyEngr</a>
+          <p>Check your engineer before you build. A hackathon project, 2026.</p>
+        </div>
+        <div class="footer-links">
+          <div><h3>Explore</h3><a href="index.html">Home</a><a href="index.html#find">Find an engineer</a><a href="about.html">About</a></div>
+          <div><h3>Trust</h3><a href="privacy.html">Privacy and disclaimer</a><a href="mailto:momoh_elijah@yahoo.com">Report a problem</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Demo version: all engineers shown are sample data, not real COREN records.</span>
+        <span>Always confirm registration with COREN before hiring.</span>
+      </div>
+    </div>
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/motion.js"></script>
 </body>
 </html>

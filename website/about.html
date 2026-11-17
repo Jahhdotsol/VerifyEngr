@@ -4,53 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — verifyEngr</title>
+  <meta name="description" content="Why verifyEngr exists, where its data comes from and what comes next.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="verifyEngr">
+  <meta property="og:title" content="About verifyEngr">
+  <meta property="og:description" content="Why verifyEngr exists, where its data comes from and what comes next.">
+  <meta property="og:image" content="https://verifyengr.vercel.app/website/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a1630">
   <link rel="icon" href="images/logo.svg">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
   <!-- ===== Header (same on every page) ===== -->
   <header class="site-header">
-    <a class="logo" href="index.html"><img src="images/logo.svg" alt="" width="28" height="28"> verifyEngr</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="images/logo.svg" alt=""> verifyEngr</a>
+      <nav class="site-nav" aria-label="Main">
+        <a class="nav-hide" href="index.html#find">Find an engineer</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="index.html#top">Verify</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="prose">
-    <h1>About verifyEngr</h1>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <h1 class="display reveal-lines">
+          <span class="line"><span style="--i:0">Built so every</span></span>
+          <span class="line"><span style="--i:1">building starts</span></span>
+          <span class="line"><span style="--i:2">with a check.</span></span>
+        </h1>
+        <p class="fade-up" style="--d:400ms">verifyEngr makes checking an engineer as quick as a search, so homeowners, developers and inspectors know who they are hiring.</p>
+      </div>
+    </section>
 
-    <h2>The problem</h2>
-    <p>Building collapses in Nigeria are often linked to unqualified or unregistered practitioners. Yet most homeowners have no quick way to check that the "engineer" they are paying is really registered with COREN, the Council for the Regulation of Engineering in Nigeria.</p>
+    <section class="prose">
+      <div class="wrap">
+        <h2>The problem</h2>
+        <p>The Building Collapse Prevention Guild has recorded 679 building collapses and more than 1,639 deaths in Nigeria since 1974 (<a href="https://www.nigeriainfo.fm/news/homepage/falling-walls-failing-standards-nigerias-50-year-battle-with-building-collapses" target="_blank" rel="noopener">Nigeria Info, November 2025</a>). Experts point to substandard materials, weak enforcement and unqualified people posing as professionals.</p>
+        <p>Most people hiring for a building project have no quick way to check that their engineer is registered with COREN, the Council for the Regulation of Engineering in Nigeria.</p>
 
-    <h2>Our mission</h2>
-    <p>Make checking an engineer as easy as a quick search, so every building starts with a qualified professional.</p>
+        <h2>What you can do here</h2>
+        <ul>
+          <li>Verify a COREN number in seconds.</li>
+          <li>Search engineers by name, discipline or state.</li>
+          <li>See experience, past projects and registration status on one record.</li>
+          <li>Email a registered engineer, share a record on WhatsApp, or report a problem.</li>
+        </ul>
 
-    <h2>What you can do</h2>
-    <ul>
-      <li>Verify a COREN number in seconds.</li>
-      <li>Search engineers by name, discipline or state.</li>
-      <li>See experience, past projects and registration status.</li>
-      <li>Contact registered engineers, share a result, or report a problem.</li>
-    </ul>
+        <h2>Our data</h2>
+        <p>This demo uses <strong>sample data</strong> modelled on COREN and NSE (Nigerian Society of Engineers) records. No real person's registration is shown. We plan to partner with COREN and NSE to bring in real, up-to-date records.</p>
 
-    <h2>Our data</h2>
-    <p>This demo uses <strong>sample data</strong> modelled on COREN and NSE (Nigerian Society of Engineers) records. No real person's registration is shown. We plan to partner with COREN and NSE to bring in real, up-to-date data.</p>
+        <h2>What comes next</h2>
+        <ul>
+          <li>Official records through a COREN and NSE partnership</li>
+          <li>Consultants and construction companies</li>
+          <li>Engineers claiming and updating their own records</li>
+        </ul>
 
-    <h2>What's next</h2>
-    <ul>
-      <li>Official data through a COREN and NSE partnership</li>
-      <li>Consultants and construction companies</li>
-      <li>Engineers claiming and updating their own profiles</li>
-    </ul>
-
-    <p class="note">verifyEngr does not replace official checks. Always confirm registration with COREN before hiring.</p>
+        <p class="callout">verifyEngr does not replace official checks. Always confirm registration with COREN before hiring. Read our <a href="privacy.html">privacy and disclaimer</a>.</p>
+      </div>
+    </section>
   </main>
 
   <!-- ===== Footer (same on every page) ===== -->
-  <footer class="site-footer">
-    <p>verifyEngr · Hackathon project 2026 · <a href="about.html">About</a></p>
-    <p class="note">Always confirm registration with COREN before hiring.</p>
+  <footer class="site-footer dark">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <a class="logo" href="index.html"><img src="images/logo.svg" alt=""> verifyEngr</a>
+          <p>Check your engineer before you build. A hackathon project, 2026.</p>
+        </div>
+        <div class="footer-links">
+          <div><h3>Explore</h3><a href="index.html">Home</a><a href="index.html#find">Find an engineer</a><a href="about.html">About</a></div>
+          <div><h3>Trust</h3><a href="privacy.html">Privacy and disclaimer</a><a href="mailto:momoh_elijah@yahoo.com">Report a problem</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Demo version: all engineers shown are sample data, not real COREN records.</span>
+        <span>Always confirm registration with COREN before hiring.</span>
+      </div>
+    </div>
   </footer>
+
+  <script src="js/motion.js"></script>
 </body>
 </html>

@@ -3,34 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engineer profile — verifyEngr</title>
+  <title>Engineer verification record — verifyEngr</title>
+  <meta name="description" content="An engineer's registration status, experience and past projects on verifyEngr.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="verifyEngr">
+  <meta property="og:title" content="Engineer verification record — verifyEngr">
+  <meta property="og:description" content="See this engineer's registration status, experience and past projects.">
+  <meta property="og:image" content="https://verifyengr.vercel.app/website/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a1630">
   <link rel="icon" href="images/logo.svg">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="profile-page">
+
   <!-- ===== Header (same on every page) ===== -->
   <header class="site-header">
-    <a class="logo" href="index.html"><img src="images/logo.svg" alt="" width="28" height="28"> verifyEngr</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="images/logo.svg" alt=""> verifyEngr</a>
+      <nav class="site-nav" aria-label="Main">
+        <a class="nav-hide" href="index.html#find">Find an engineer</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="index.html#top">Verify</a>
+      </nav>
+    </div>
   </header>
 
-  <p class="sample-banner">Demo version: all engineers shown are <strong>sample data</strong>, not real COREN records.</p>
-
-  <main>
-    <a href="index.html#find">← Back to search</a>
-    <!-- The engineer's details are filled in by js/app.js -->
-    <div id="profile"></div>
+  <main class="profile-main">
+    <div class="wrap">
+      <a class="back" href="index.html#find"><span aria-hidden="true">&larr;</span> Back to search</a>
+      <!-- The verification record is filled in by js/app.js -->
+      <div id="profile"></div>
+    </div>
   </main>
 
   <!-- ===== Footer (same on every page) ===== -->
-  <footer class="site-footer">
-    <p>verifyEngr · Hackathon project 2026 · <a href="about.html">About</a></p>
-    <p class="note">Always confirm registration with COREN before hiring.</p>
+  <footer class="site-footer dark">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <a class="logo" href="index.html"><img src="images/logo.svg" alt=""> verifyEngr</a>
+          <p>Check your engineer before you build. A hackathon project, 2026.</p>
+        </div>
+        <div class="footer-links">
+          <div><h3>Explore</h3><a href="index.html">Home</a><a href="index.html#find">Find an engineer</a><a href="about.html">About</a></div>
+          <div><h3>Trust</h3><a href="privacy.html">Privacy and disclaimer</a><a href="mailto:momoh_elijah@yahoo.com">Report a problem</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Demo version: all engineers shown are sample data, not real COREN records.</span>
+        <span>Always confirm registration with COREN before hiring.</span>
+      </div>
+    </div>
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/motion.js"></script>
 </body>
 </html>

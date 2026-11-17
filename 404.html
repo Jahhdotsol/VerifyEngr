@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found — verifyEngr</title>
+  <meta name="robots" content="noindex">
+  <!-- Works on Vercel (site at /) and GitHub Pages (site at /VerifyEngr/) -->
+  <script>
+    window.SITE = location.hostname.endsWith("github.io") ? "/VerifyEngr/website/" : "/website/";
+    document.write('<base href="' + window.SITE + '">');
+  </script>
+  <link rel="icon" href="images/logo.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="images/logo.svg" alt=""> verifyEngr</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="index.html#top">Verify</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <h1 class="display reveal-lines">
+          <span class="line"><span style="--i:0">This page</span></span>
+          <span class="line"><span style="--i:1">isn't here.</span></span>
+        </h1>
+        <p class="fade-up" style="--d:300ms">The link may be mistyped or out of date. Search for the engineer instead, or check a COREN number from the home page.</p>
+        <p class="fade-up" style="--d:400ms; margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+          <a class="btn" href="index.html#top">Go to the home page</a>
+          <a class="btn btn-ghost" href="index.html#find">Find an engineer</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/motion.js"></script>
+</body>
+</html>
