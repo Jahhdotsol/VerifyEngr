@@ -32,13 +32,14 @@ verifyEngr/
 │   ├── css/
 │   │   └── styles.css ← Colours, fonts, layout and animations.
 │   ├── js/
-│   │   ├── app.js     ← The logic: verify, search, filters, profile.
+│   │   ├── config.js  ← Supabase address and public key.
+│   │   ├── app.js     ← The logic: verify, search, filters, profile, reports.
 │   │   └── motion.js  ← Scroll animations, 3D building, card tilt.
 │   ├── fonts/         ← Bundled fonts and their licences.
 │   └── images/        ← Logo and the link-preview image (og-image.jpg).
 │
 ├── data/              ← The information the website shows.
-│   └── sample-engineers.json  ← Sample engineer listings (not real people).
+│   └── sample-engineers.json  ← Backup copy of the sample engineers, used if the database can't be reached.
 │
 └── docs/              ← Planning and hackathon documents.
     └── README.md      ← Links to the PRD, pitch notes and judging criteria.
@@ -76,6 +77,20 @@ No installation needed.
 ## Change the report email
 
 Reports go to momoh_elijah@yahoo.com. To change this, edit `REPORT_EMAIL` near the top of `website/js/app.js`, and the email links in the footers and on `privacy.html`.
+
+## Backend (Supabase)
+
+The engineers and reports live in a Supabase database (project "Jahhdotsol's Project").
+
+| Table | What it holds | Who can do what |
+| --- | --- | --- |
+| `engineers` | The 40 sample engineer records | Anyone can read. Only you can add or change records (in the Supabase dashboard). |
+| `reports` | Problems people report from a profile page | Anyone can send one. Only you can read them (Supabase dashboard → Table Editor → reports). |
+
+- The website connects using `website/js/config.js`. It holds the **publishable** key, which is safe to be public.
+- Never put the **secret** (service role) key in the website files.
+- If the database can't be reached, the site uses `data/sample-engineers.json` instead.
+- To change an engineer, edit the row in Supabase → Table Editor → engineers. The site shows the change on the next page load.
 
 ## Settings (.env)
 

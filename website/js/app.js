@@ -5,8 +5,11 @@
 
 // ---------- Settings you can change ----------
 
-const DATA_FILE = "../data/sample-engineers.json";
-const REPORT_EMAIL = "momoh_elijah@yahoo.com"; // where "Report a problem" emails go
+const CONFIG = window.VERIFYENGR_CONFIG || {};          // from js/config.js
+const API = CONFIG.SUPABASE_URL ? `${CONFIG.SUPABASE_URL}/rest/v1` : null;
+const API_HEADERS = { apikey: CONFIG.SUPABASE_KEY, "Content-Type": "application/json" };
+const BACKUP_FILE = "../data/sample-engineers.json";    // used only if the database can't be reached
+const REPORT_EMAIL = "momoh_elijah@yahoo.com";          // fallback if a report can't be saved
 const CARDS_PER_PAGE = 9;                      // cards shown before "Show more"
 
 // ---------- Helpers ----------
@@ -78,15 +81,50 @@ function matches(e, text) {
   return text.split(/\s+/).every((t) => hay.includes(t) || words.some((w) => closeEnough(t, w) || (w.startsWith(t.slice(0, -1)) && t.length > 4)));
 }
 
-// Loads the engineer list, then runs the page's code
+// Turns a database row (full_name) into the shape the site uses (fullName)
+function fromRow(r) {
+  return {
+    id: r.id, fullName: r.full_name, corenNumber: r.coren_number, status: r.status,
+    discipline: r.discipline, yearsOfExperience: r.years_of_experience, registeredSince: r.registered_since,
+    state: r.state, city: r.city, employer: r.employer, email: r.email,
+    pastProjects: r.past_projects || [], lastChecked: r.last_checked, source: r.source,
+  };
+}
+
+// Loads the engineer list from Supabase (or the backup file), then runs the page's code
+async function fetchEngineers() {
+  if (API) {
+    try {
+      const res = await fetch(`${API}/engineers?select=*&order=id`, { headers: API_HEADERS });
+      if (res.ok) return (await res.json()).map(fromRow);
+      console.warn("Supabase answered", res.status, "- using the backup file");
+    } catch (err) {
+      console.warn("Supabase could not be reached - using the backup file", err);
+    }
+  }
+  const res = await fetch(BACKUP_FILE);
+  if (!res.ok) throw new Error("No engineer data");
+  return res.json();
+}
+
 function loadEngineers(callback) {
-  fetch(DATA_FILE)
-    .then((response) => response.json())
+  fetchEngineers()
     .then(callback)
     .catch(() => {
       const box = document.getElementById("results") || document.getElementById("profile");
-      if (box) box.innerHTML = '<p class="empty">The engineer list could not load. Refresh the page, or open the site with Live Server (see README).</p>';
+      if (box) box.innerHTML = '<p class="empty">The engineer list could not load. Check your connection and refresh the page.</p>';
     });
+}
+
+// Saves a report in the database. Visitors can send reports but cannot read them.
+async function sendReport(report) {
+  if (!API) throw new Error("No database configured");
+  const res = await fetch(`${API}/reports`, {
+    method: "POST",
+    headers: { ...API_HEADERS, Prefer: "return=minimal" },
+    body: JSON.stringify(report),
+  });
+  if (!res.ok) throw new Error(`Report not saved (${res.status})`);
 }
 
 // One engineer as a card
@@ -288,8 +326,22 @@ if (profileBox) {
         ${emailButton}
         <a class="btn btn-wa" href="https://wa.me/?text=${encodeURIComponent(shareText)}" target="_blank" rel="noopener">Share on WhatsApp</a>
         <button class="btn btn-ghost" id="copy-link" type="button">Copy link</button>
-        <a class="report-link" href="${reportLink}">Report a problem with this record</a>
+        <button class="report-link" id="report-toggle" type="button" aria-expanded="false" aria-controls="report-form">Report a problem with this record</button>
       </div>
+
+      <form class="report-form" id="report-form" hidden>
+        <h2>Report a problem</h2>
+        <p class="note">Tell us what is wrong with this record, for example a wrong status, a fake listing or someone using this name. Only the verifyEngr team can read reports.</p>
+        <label for="report-message">What is wrong?</label>
+        <textarea id="report-message" required minlength="5" maxlength="2000" rows="4" placeholder="Describe the problem"></textarea>
+        <label for="report-email">Your email (optional, so we can follow up)</label>
+        <input id="report-email" type="email" maxlength="254" placeholder="you@example.com">
+        <div class="report-actions">
+          <button class="btn" type="submit">Send report</button>
+          <a href="${reportLink}">Or send it by email</a>
+        </div>
+        <p class="report-status" id="report-status" role="status"></p>
+      </form>
 
       <section class="projects" aria-labelledby="proj-title">
         <h2 id="proj-title" class="display">Past projects</h2>
@@ -299,6 +351,7 @@ if (profileBox) {
       </section>`;
 
     drawGuilloche(profileBox.querySelector(".guilloche"));
+    setUpReportForm(e);
 
     document.getElementById("copy-link").addEventListener("click", (event) => {
       const button = event.currentTarget;
@@ -336,4 +389,38 @@ function drawGuilloche(svg) {
     paths += `<path d="${d}Z" fill="none" stroke="${k % 2 ? "#8fa4ff" : "#2348e8"}" stroke-opacity=".55" stroke-width=".7" vector-effect="non-scaling-stroke"/>`;
   }
   svg.innerHTML = paths;
+}
+
+// "Report a problem" form on the profile page
+function setUpReportForm(e) {
+  const toggle = document.getElementById("report-toggle");
+  const form = document.getElementById("report-form");
+  const status = document.getElementById("report-status");
+  const button = form.querySelector("button[type=submit]");
+
+  toggle.addEventListener("click", () => {
+    form.hidden = !form.hidden;
+    toggle.setAttribute("aria-expanded", String(!form.hidden));
+    if (!form.hidden) { form.scrollIntoView({ behavior: "smooth", block: "center" }); document.getElementById("report-message").focus({ preventScroll: true }); }
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const message = document.getElementById("report-message").value.trim();
+    const email = document.getElementById("report-email").value.trim();
+    if (message.length < 5) { status.className = "report-status bad"; status.textContent = "Write at least a few words about the problem."; return; }
+
+    button.disabled = true; button.textContent = "Sending…";
+    try {
+      await sendReport({ engineer_id: e.id, coren_number: e.corenNumber, message, reporter_email: email || null });
+      form.reset();
+      status.className = "report-status good";
+      status.textContent = "Report sent. Thank you, we will review this record.";
+      button.textContent = "Report sent";
+    } catch (err) {
+      status.className = "report-status bad";
+      status.innerHTML = `Your report could not be sent. Please email it to <a href="mailto:${REPORT_EMAIL}">${REPORT_EMAIL}</a> instead.`;
+      button.disabled = false; button.textContent = "Send report";
+    }
+  });
 }

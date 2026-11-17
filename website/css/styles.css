@@ -63,7 +63,7 @@ body {
 img, svg, canvas { display: block; max-width: 100%; }
 a { color: var(--blue); text-underline-offset: 3px; }
 h1, h2, h3, p { margin: 0; }
-button, input, select { font: inherit; color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--blue-soft); outline-offset: 3px; border-radius: 6px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .wrap { width: min(var(--page), 100% - 48px); margin-inline: auto; }
@@ -411,7 +411,19 @@ button, input, select { font: inherit; color: inherit; }
 .actions { max-width: 920px; margin: var(--s4) auto 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .actions .btn-wa { background: #1fa855; }
 .actions .btn-wa:hover { background: #178544; }
-.report-link { margin-left: auto; align-self: center; color: var(--red); font-size: 15px; font-weight: 500; }
+.report-link { margin-left: auto; align-self: center; color: var(--red); font-size: 15px; font-weight: 500; background: none; border: 0; padding: 4px 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.report-form { max-width: 920px; margin: var(--s4) auto 0; padding: var(--s4); border-radius: var(--radius); background: #fff; box-shadow: 0 20px 50px rgba(14,30,80,.10); border: 1px solid var(--line); display: grid; gap: 8px; animation: verdict-in .5s var(--ease) both; }
+.report-form[hidden] { display: none; }
+.report-form h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+.report-form .note { color: var(--muted); font-size: 15px; margin-bottom: 8px; }
+.report-form label { font-weight: 500; font-size: 15px; margin-top: 8px; }
+.report-form textarea, .report-form input { width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 12px; font-size: 16px; background: var(--mist); resize: vertical; }
+.report-form textarea:focus, .report-form input:focus { outline: 0; border-color: var(--blue); background: #fff; }
+.report-actions { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap; margin-top: var(--s2); }
+.report-actions a { font-size: 15px; }
+.report-status { font-size: 15px; font-weight: 500; min-height: 1.2em; }
+.report-status.good { color: var(--green); }
+.report-status.bad { color: var(--red); }
 
 .projects { max-width: 920px; margin: var(--s6) auto 0; }
 .projects h2 { font-size: clamp(40px, 5vw, 64px); }
