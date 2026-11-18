@@ -111,3 +111,9 @@ For the hackathon, you don't need to fill anything in; the site uses sample data
 - **Next phase:** consultants and construction companies; real data through a COREN/NSE partnership
 
 See `docs/README.md` for the full plan.
+
+---
+
+## Licence
+
+Copyright © 2026 verifyEngr. All rights reserved. You may view this code (for example, to judge the project), but not copy, reuse or redistribute it without permission. See [LICENSE](LICENSE). The bundled fonts keep their own free licences (see `website/fonts/`).
